@@ -37,6 +37,7 @@ a:hover {
 
 .a, .b, .c, .d, .e, .f {
   border: 1px solid black;
+  background-color: #a2a3a3;
 }
 
 #cont {
