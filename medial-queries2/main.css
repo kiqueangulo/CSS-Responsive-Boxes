@@ -8,63 +8,108 @@ body {
   background-color: bisque;
 }
 
+nav {
+  width: 100%;
+  background-color: #ffdaad;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* justify-content: space-between; */
 }
 
 .a, .b, .c, .d, .e, .f {
   border: 1px solid black;
 }
 
-.cont {
+#cont {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 70vh;
-}
-
-.a, .f {
-  max-height: 10vh;
-  flex-grow: 1;
-  margin: 8px;
+  justify-content: space-around;
+  
 }
 
 .row {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+}
+
+.b {
+  min-height: 35vh;
+  margin-bottom: 2em;
 }
 
 .c, .d, .e {
-  flex-grow: 3;
-  width: 30%;
-  margin: 8px;
-  min-height: 11vh;
-  justify-content: space-between;
+  flex-basis: 30%;
+  min-height: 12vh;
+  margin-bottom: 1em;
 }
 
-.cont > b {
-  width: 90%;
-  /* min-height: 60%; */
-  flex-grow: 3;
-  margin: 8px;
+.a, .f {
+  min-height: 15vh;
+  margin-bottom: 1em;
 }
 
-@media (min-width: 600px) {
-  .container {
-    display: flex;
-    flex-direction: row;
+@media (min-width: 650px) {
+  nav {
+    max-height: 55px;
+    margin-bottom: 0;
   }
 
-  a {
-    display: flex;
-    flex-direction: column;
-    min-height: 30vh;
+  ul {
+    justify-content: center;
+  }
+
+  li {
+    padding: 0.5em 2em;
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .a {
+    flex-basis: 100%;
+    min-height: 20vh;
+  }
+
+  #cont {
+    flex-basis: 70%;
+    min-height: 10vh;
+    justify-content: space-between;
+  }
+
+  .b {
+    margin-bottom: -100px;
+  }
+
+  .c, .d, .e {
+    flex-basis: 32%;
+    min-height: 17vh;
+    margin-top: -100px;
+  }
+
+  .f {
+    flex-basis: 27%;
+    min-height: 10vh;
   }
 }
